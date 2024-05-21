@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "174760756963",
+    "project_id": "car-gourping",
+    "storage_bucket": "car-gourping.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174760756963:android:d7805dce05825853a2a7d6",
+        "android_client_info": {
+          "package_name": "com.example.rc_fl_gopoolar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAR6gIaDfXOOQCLPep5MlR5OKO9TnNkfhw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
