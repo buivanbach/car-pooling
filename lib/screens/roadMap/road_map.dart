@@ -56,13 +56,13 @@ class _RoadMapScreenState extends State<RoadMapScreen> {
 
 
     {
-      "image": "assets/mapView/destinationicon.png",
+      "image": "assets/mapView/pickupicon.png",
       "latLang": const LatLng(21.033619703508023, 105.79774691517424),
     },
 
 
     {
-      "image": "assets/mapView/ride-start-icon.png",
+      "image": "assets/mapView/pickupicon.png",
       "latLang": const LatLng(21.030206770557207, 105.80140344347554),
       "info": "Ride end"
     },

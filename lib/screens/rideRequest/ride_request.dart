@@ -13,7 +13,7 @@ class RideRequestScreen extends StatefulWidget {
 class _RideRequestScreenState extends State<RideRequestScreen> {
   final rideList = [
     {
-      "date": "Today",
+      "date": "Hôm nay",
       "time": "9:00 am",
       "pickup": "Cầu Vượt Mai Dịch, Cầu Giấy, Hà Nội, Việt Nam",
       "destination": "79-37 Đ. Cầu Giấy, Quan Hoa, Cầu Giấy, Hà Nội, Việt Nam",
@@ -245,7 +245,7 @@ class _RideRequestScreenState extends State<RideRequestScreen> {
           ],
         ),
         child: Text(
-          "Request(${rideList[index]['request']})",
+          "Yêu cầu (${rideList[index]['request']})",
           style: semibold15Primary,
           overflow: TextOverflow.ellipsis,
         ),

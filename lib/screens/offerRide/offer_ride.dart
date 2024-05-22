@@ -360,7 +360,7 @@ class _OfferRideScreenState extends State<OfferRideScreen> {
                 hintText: "Giá tiền mỗi ghế",
                 hintStyle: medium15Grey,
                 isDense: true,
-                prefixText: "\$",
+                prefixText: "",
                 prefixStyle: medium15Black33),
           ),
         )
@@ -416,7 +416,7 @@ class _OfferRideScreenState extends State<OfferRideScreen> {
                 titleText("Điểm đón"),
                 height5Space,
                 const Text(
-                  "P. Phạm Văn Bạch, Yên Hoà, Cầu Giấy, Hà Nội, Việt Nam",
+                  "Cầu Vượt Mai Dịch, Cầu Giấy, Hà Nội, Việt Nam",
                   style: medium14Grey,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
@@ -427,7 +427,7 @@ class _OfferRideScreenState extends State<OfferRideScreen> {
                 titleText("Điểm trả"),
                 height5Space,
                 const Text(
-                  "106 P. Chùa Láng, Láng Thượng, Hai Bà Trưng, Hà Nội, Việt Nam",
+                  "175 Đ. Cầu Giấy, Dịch Vọng, Cầu Giấy, Hà Nội, Việt Nam",
                   style: medium14Grey,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,

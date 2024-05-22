@@ -80,8 +80,8 @@ class _SuccessScreenState extends State<SuccessScreen> {
                 constraints: BoxConstraints(maxWidth: size.width * 0.56),
                 child: Text(
                   id == 1
-                      ? "Your ride offer has been created successfully"
-                      : "Your car pooing has been  confirmed",
+                      ? "Chuyến đi của bạn đã được tạo"
+                      : "Bạn đã thêm chuyến đi thành công",
                   style: semibold14Grey,
                   textAlign: TextAlign.center,
                 ),
