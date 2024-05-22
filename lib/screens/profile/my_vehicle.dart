@@ -159,7 +159,7 @@ class _MyVehicleScreenState extends State<MyVehicleScreen> {
                       ),
                       height5Space,
                       Text(
-                        "${vehicleList[index]['seat']} person",
+                        "${vehicleList[index]['seat']} Người",
                         style: medium15White,
                         overflow: TextOverflow.ellipsis,
                       )

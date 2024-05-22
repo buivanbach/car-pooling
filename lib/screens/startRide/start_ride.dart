@@ -18,68 +18,52 @@ class _StartRideScreenState extends State<StartRideScreen> {
   GoogleMapController? mapController;
 
   static const CameraPosition currentPosition = CameraPosition(
-    target: LatLng(22.535524, 88.365300),
-    zoom: 12.00,
+    target: LatLng(21.035411462013872, 105.79308484159006),
+    zoom: 14.00,
   );
 
   List<Marker> allMarkers = [];
   Map<PolylineId, Polyline> polylines = {};
 
   final points = [
-    const LatLng(22.548208, 88.334758),
-    const LatLng(22.549476, 88.384917),
-    const LatLng(22.573889, 88.408965),
-    const LatLng(22.626187, 88.406218),
+    const LatLng(21.0367339366131, 105.78078976517689),
+    const LatLng(21.036435314342633, 105.78947401989251),
+    const LatLng(21.033790348103594, 105.79715272932526),
+    const LatLng(21.030164108400683, 105.80149485668308),
   ];
 
   final passengerList = [
-    {"image": "assets/startRide/image-1.png", "name": "Cameron Williamson"},
-    {"image": "assets/startRide/image-2.png", "name": "Brooklyn Simmons"},
-    {"image": "assets/startRide/image-3.png", "name": "leslie alexander"},
-    {"image": "assets/startRide/image-4.png", "name": "Jacob jones"},
+    {"image": "assets/startRide/image-1.png", "name": "Ta Bao"},
+    {"image": "assets/startRide/image-2.png", "name": "Bui Bach"},
+
   ];
 
   final markerPointList = [
     {
       "image": "assets/mapView/ride-start-icon.png",
-      "latLang": const LatLng(22.548208, 88.334758),
+      "latLang": const LatLng(21.03677659688858, 105.78115541800703),
       "info": "Ride start"
     },
     {
       "image": "assets/mapView/destinationicon.png",
-      "latLang": const LatLng(22.548476, 88.364917),
+      "latLang": const LatLng(21.036691276325403, 105.78440058687444),
     },
+
     {
       "image": "assets/mapView/destinationicon.png",
-      "latLang": const LatLng(22.549476, 88.384917),
+      "latLang": const LatLng(21.03647797470363, 105.78933690008121),
     },
+
+
     {
       "image": "assets/mapView/destinationicon.png",
-      "latLang": const LatLng(22.548076, 88.348917),
+      "latLang": const LatLng(21.033619703508023, 105.79774691517424),
     },
-    {
-      "image": "assets/mapView/destinationicon.png",
-      "latLang": const LatLng(22.559076, 88.394917),
-    },
+
+
     {
       "image": "assets/mapView/ride-start-icon.png",
-      "latLang": const LatLng(22.571889, 88.405965),
-    },
-    {
-      "image": "assets/mapView/destinationicon.png",
-      "latLang": const LatLng(22.599889, 88.407565),
-    },
-    {
-      "image": "assets/mapView/destinationicon.png",
-      "latLang": const LatLng(22.613889, 88.406565),
-    },
-    {
-      "image": "assets/mapView/destinationicon.png",
-      "latLang": const LatLng(22.583889, 88.408565),
-    },
-    {
-      "image": "assets/mapView/ride-start-icon.png",
-      "latLang": const LatLng(22.626187, 88.406218),
+      "latLang": const LatLng(21.030206770557207, 105.80140344347554),
       "info": "Ride end"
     },
   ];
@@ -105,7 +89,7 @@ class _StartRideScreenState extends State<StartRideScreen> {
           ),
         ),
         title: const Text(
-          "Ride request",
+          "Yêu cầu đặt xe",
           style: semibold18White,
         ),
       ),
@@ -153,7 +137,7 @@ class _StartRideScreenState extends State<StartRideScreen> {
                       padding:
                           EdgeInsets.symmetric(horizontal: fixPadding * 2.0),
                       child: Text(
-                        "Ride start on 25 june 2023",
+                        "Thông tin chuyến xe",
                         style: semibold16Black33,
                         textAlign: TextAlign.center,
                       ),
@@ -203,27 +187,22 @@ class _StartRideScreenState extends State<StartRideScreen> {
                     ),
                     heightSpace,
                     heightSpace,
-                    step("Ride start",
-                        "2715 Ash Dr. San Jose, South Dakota 83475",
+                    step("Bắt đầu",
+                        "Cầu Vượt Mai Dịch, Cầu Giấy, Hà Nội",
                         isPickDropPoint: false),
-                    step("Pick up cameron willimson",
-                        "2715 Ash Dr. San Jose, South Dakota 83475"),
-                    step("Pick up brooklyn simmons",
-                        "2715 Ash Dr. San Jose, South Dakota 83475"),
-                    step("Pick up leslie alexander ",
-                        "2715 Ash Dr. San Jose, South Dakota 83475"),
-                    step("Pick up jacob jones",
-                        "2715 Ash Dr. San Jose, South Dakota 83475"),
-                    step("Drive", "2715 Ash Dr. San Jose, South Dakota 83475",
-                        isPickDropPoint: false),
-                    step("Drop up brooklyn simmons",
-                        "2715 Ash Dr. San Jose, South Dakota 83475"),
-                    step("Drop up leslie alexander ",
-                        "2715 Ash Dr. San Jose, South Dakota 83475"),
-                    step("Drop up jacob jones",
-                        "2715 Ash Dr. San Jose, South Dakota 83475"),
+                    step("Đón Bui Bach",
+                        "136 Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội, Việt Nam"),
+                    step("Đón Ta Bao",
+                        "2-36 Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội, Việt Nam"),
+
+
+                    step("Điểm đến của Ta Bao",
+                        "175 Đ. Cầu Giấy, Dịch Vọng, Cầu Giấy, Hà Nội, Việt Nam"),
+                    step("Điểm đến của Bui Bach",
+                        "79-37 Đ. Cầu Giấy, Quan Hoa, Cầu Giấy, Hà Nội, Việt Nam"),
+
                     step(
-                        "Ride end", "2715 Ash Dr. San Jose, South Dakota 83475",
+                        "Kết thúc", "79-37 Đ. Cầu Giấy, Quan Hoa, Cầu Giấy, Hà Nội, Việt Nam",
                         isPickDropPoint: false, isDivider: false),
                     heightBox(fixPadding * 9.0)
                   ],
@@ -263,7 +242,7 @@ class _StartRideScreenState extends State<StartRideScreen> {
             ),
             alignment: Alignment.center,
             child: const Text(
-              "Start ride",
+              "Bắt đầu",
               style: semibold18White,
               textAlign: TextAlign.center,
             ),

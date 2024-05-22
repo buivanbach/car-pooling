@@ -37,7 +37,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
         padding: const EdgeInsets.symmetric(horizontal: fixPadding * 2.0),
         physics: const BouncingScrollPhysics(),
         children: [
-          logo(),
+
           heightSpace,
           heightSpace,
           privacyPolicyList(),

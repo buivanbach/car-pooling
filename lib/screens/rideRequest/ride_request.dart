@@ -15,18 +15,17 @@ class _RideRequestScreenState extends State<RideRequestScreen> {
     {
       "date": "Today",
       "time": "9:00 am",
-      "pickup": "26B Trần Hưng Đạo, Phan Chu Trinh, Hoàn Kiếm, Hà Nội, Việt Nam",
-      "destination": "Cầu Vĩnh Tuy, Hà Nội, Việt Nam",
+      "pickup": "Cầu Vượt Mai Dịch, Cầu Giấy, Hà Nội, Việt Nam",
+      "destination": "79-37 Đ. Cầu Giấy, Quan Hoa, Cầu Giấy, Hà Nội, Việt Nam",
       "request": 2,
       "passenger": [
         "assets/myRides/image-2.png",
         "assets/myRides/image-4.png",
-        "assets/myRides/image-3.png",
-        "assets/myRides/image-5.png",
+
       ]
     },
     {
-      "date": "22 jan 2023",
+      "date": "14/05/2024",
       "time": "9:00 am",
       "pickup": "9 P. Phạm Văn Bạch, Dịch Vọng Hậu, Cầu Giấy, Hà Nội",
       "destination": "P. Hồng Tiến, Ngọc Lâm, Long Biên, Hà Nội",
@@ -37,7 +36,7 @@ class _RideRequestScreenState extends State<RideRequestScreen> {
       ]
     },
     {
-      "date": "23 jan 2023",
+      "date": "24/05/2024",
       "time": "9:00 am",
       "pickup": "P. Hồng Tiến, Ngọc Lâm, Long Biên, Hà Nội",
       "destination": "9 P. Phạm Văn Bạch, Dịch Vọng Hậu, Cầu Giấy, Hà Nội",
@@ -48,7 +47,7 @@ class _RideRequestScreenState extends State<RideRequestScreen> {
       ]
     },
     {
-      "date": "24 jan 2023",
+      "date": "24/05/2024",
       "time": "9:00 am",
       "pickup": "Nguyễn Văn Cừ, Ngọc Lâm, Long Biên, Hà Nội",
       "destination": "52 P. Đặng Thai Mai, Quảng An, Tây Hồ, Hà Nội",
@@ -59,7 +58,7 @@ class _RideRequestScreenState extends State<RideRequestScreen> {
       ]
     },
     {
-      "date": "24 jan 2023",
+      "date": "24/05/2024",
       "time": "9:00 am",
       "pickup": "P. Hồng Tiến, Ngọc Lâm, Long Biên, Hà Nội",
       "destination": "9 P. Phạm Văn Bạch, Dịch Vọng Hậu, Cầu Giấy, Hà Nội 11300, Việt Nam",
@@ -352,7 +351,7 @@ class _RideRequestScreenState extends State<RideRequestScreen> {
                             ),
                             alignment: Alignment.center,
                             child: const Text(
-                              "Decline",
+                              "Từ chối",
                               style: semibold16Primary,
                             ),
                           ),
@@ -380,7 +379,7 @@ class _RideRequestScreenState extends State<RideRequestScreen> {
                             ),
                             alignment: Alignment.center,
                             child: const Text(
-                              "Accept",
+                              "Chấp nhận",
                               style: semibold16White,
                               overflow: TextOverflow.ellipsis,
                             ),

@@ -18,68 +18,52 @@ class _RoadMapScreenState extends State<RoadMapScreen> {
   GoogleMapController? mapController;
 
   static const CameraPosition currentPosition = CameraPosition(
-    target: LatLng(22.535524, 88.365300),
-    zoom: 12.00,
+    target: LatLng(21.035411462013872, 105.79308484159006),
+    zoom: 14.00,
   );
 
   List<Marker> allMarkers = [];
   Map<PolylineId, Polyline> polylines = {};
 
   final points = [
-    const LatLng(22.548208, 88.334758),
-    const LatLng(22.549476, 88.384917),
-    const LatLng(22.573889, 88.408965),
-    const LatLng(22.626187, 88.406218),
+    const LatLng(21.0367339366131, 105.78078976517689),
+    const LatLng(21.036435314342633, 105.78947401989251),
+    const LatLng(21.033790348103594, 105.79715272932526),
+    const LatLng(21.030164108400683, 105.80149485668308),
   ];
 
   final passengerList = [
-    {"image": "assets/startRide/image-1.png", "name": "Tạ Thắng"},
-    {"image": "assets/startRide/image-2.png", "name": "Hà Phương"},
-    {"image": "assets/startRide/image-3.png", "name": "Quang Ngô"},
-    {"image": "assets/startRide/image-4.png", "name": "Trần Thịnh"},
+    {"image": "assets/startRide/image-1.png", "name": "Ta Bao"},
+    {"image": "assets/startRide/image-2.png", "name": "Bui Bach"},
+
   ];
 
   final markerPointList = [
     {
       "image": "assets/mapView/ride-start-icon.png",
-      "latLang": const LatLng(21.070991812324493, 105.7853710166412),
+      "latLang": const LatLng(21.03677659688858, 105.78115541800703),
       "info": "Ride start"
     },
     {
-      "image": "assets/endRide/grey-marker.png",
-      "latLang": const LatLng(21.029569046736334, 105.7795601989241),
+      "image": "assets/mapView/destinationicon.png",
+      "latLang": const LatLng(21.036691276325403, 105.78440058687444),
     },
-    {
-      "image": "assets/endRide/grey-marker.png",
-      "latLang": const LatLng(21.027877068067973, 105.78735600916951),
-    },
-    {
-      "image": "assets/endRide/grey-marker.png",
-      "latLang": const LatLng(21.01436029896516, 105.79543078824493),
-    },
+
     {
       "image": "assets/mapView/destinationicon.png",
-      "latLang": const LatLng(21.00944846381003, 105.78891903388327),
+      "latLang": const LatLng(21.03647797470363, 105.78933690008121),
     },
+
+
+    {
+      "image": "assets/mapView/destinationicon.png",
+      "latLang": const LatLng(21.033619703508023, 105.79774691517424),
+    },
+
+
     {
       "image": "assets/mapView/ride-start-icon.png",
-      "latLang": const LatLng(20.973616836838154, 105.81689589574434),
-    },
-    {
-      "image": "assets/endRide/red-marker.png",
-      "latLang": const LatLng(20.966230290557522, 105.83580784390732),
-    },
-    {
-      "image": "assets/endRide/red-marker.png",
-      "latLang": const LatLng(20.964449513706224, 105.87311491516452),
-    },
-    {
-      "image": "assets/endRide/red-marker.png",
-      "latLang": const LatLng(21.011623730817, 105.91750743457096),
-    },
-    {
-      "image": "assets/mapView/ride-start-icon.png",
-      "latLang": const LatLng(20.89528567626856, 105.99307880983307),
+      "latLang": const LatLng(21.030206770557207, 105.80140344347554),
       "info": "Ride end"
     },
   ];
@@ -105,7 +89,7 @@ class _RoadMapScreenState extends State<RoadMapScreen> {
           ),
         ),
         title: const Text(
-          "Roadmap",
+          "Lộ trình",
           style: semibold18White,
         ),
       ),
@@ -153,7 +137,7 @@ class _RoadMapScreenState extends State<RoadMapScreen> {
                       padding:
                           EdgeInsets.symmetric(horizontal: fixPadding * 2.0),
                       child: Text(
-                        "Ride start on 25 june 2023",
+                        "Hành trình chuyến đi",
                         style: semibold16Black33,
                         textAlign: TextAlign.center,
                       ),
@@ -203,34 +187,23 @@ class _RoadMapScreenState extends State<RoadMapScreen> {
                     ),
                     heightSpace,
                     heightSpace,
-                    step("Ride start",
-                        "2715 Ash Dr. San Jose, South Dakota 83475", greyColor,
+                    step("Bắt đầu",
+                        "Cầu Vượt Mai Dịch, Cầu Giấy, Hà Nội",greyColor,
                         isPickDropPoint: false),
-                    step("Pick up cameron willimson",
-                        "2715 Ash Dr. San Jose, South Dakota 83475", greyColor),
-                    step("Pick up brooklyn simmons",
-                        "2715 Ash Dr. San Jose, South Dakota 83475", greyColor),
-                    step("Pick up leslie alexander ",
-                        "2715 Ash Dr. San Jose, South Dakota 83475", greyColor),
+                    step("Đón Bui Bach",
+                        "136 Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội, Việt Nam",greyColor),
+                    step("Đón Ta Bao",
+                        "2-36 Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội, Việt Nam",greenColor),
+
+
+                    step("Điểm đến của Ta Bao",
+                        "175 Đ. Cầu Giấy, Dịch Vọng, Cầu Giấy, Hà Nội, Việt Nam",redColor),
+                    step("Điểm đến của Bui Bach",
+                        "79-37 Đ. Cầu Giấy, Quan Hoa, Cầu Giấy, Hà Nội, Việt Nam",redColor),
+
                     step(
-                        "Pick up jacob jones",
-                        "2715 Ash Dr. San Jose, South Dakota 83475",
-                        greenColor),
-                    step("Drive", "2715 Ash Dr. San Jose, South Dakota 83475",
-                        primaryColor,
-                        isPickDropPoint: false),
-                    step("Drop up brooklyn simmons",
-                        "2715 Ash Dr. San Jose, South Dakota 83475", redColor),
-                    step("Drop up leslie alexander ",
-                        "2715 Ash Dr. San Jose, South Dakota 83475", redColor),
-                    step("Drop up jacob jones",
-                        "2715 Ash Dr. San Jose, South Dakota 83475", redColor),
-                    step(
-                        "Ride end",
-                        "2715 Ash Dr. San Jose, South Dakota 83475",
-                        primaryColor,
-                        isPickDropPoint: false,
-                        isDivider: false),
+                        "Kết thúc", "79-37 Đ. Cầu Giấy, Quan Hoa, Cầu Giấy, Hà Nội, Việt Nam",greyColor,
+                        isPickDropPoint: false, isDivider: false),
                     heightBox(fixPadding * 9.0)
                   ],
                 ),
